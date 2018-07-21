@@ -1,7 +1,7 @@
 # Shrinkage-loss-for-object-tracking
 This is the code for our ECCV 2018 paper Deep Regression Tracking with Shrinkage Loss.
 
-The origion version is based on caffe:https://github.com/BVLC/caffe
+The origion version is based on caffe: https://github.com/BVLC/caffe
 
 The pytorch version is coming soon.
 
