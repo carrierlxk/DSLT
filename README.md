@@ -5,7 +5,8 @@ The origion version is based on caffe: https://github.com/BVLC/caffe
 
 The pytorch version is coming soon.
 
-If you find the code useful, please cite 
+If you find the code useful, please cite:
+
 @inproceedings{lu-eccv18-DSLT,
     author    = {Lu, Xiankai and Ma, Chao and Ni, Bingbing and Yang, Xiaokang and Ian, Reid and Yang, Ming-Hsuan}, 
     title     = {Deep Regression Tracking with Shrinkage Loss}, 
