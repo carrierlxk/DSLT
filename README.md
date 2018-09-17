@@ -7,13 +7,15 @@ The pytorch version is coming soon.
 
 If you find the code useful, please cite:
 
-@inproceedings{lu-eccv18-DSLT,
+@inproceedings{lu2018deep,
 
-    author    = {Lu, Xiankai and Ma, Chao and Ni, Bingbing and Yang, Xiaokang and Ian, Reid and Yang, Ming-Hsuan},
+    author    = {Lu, Xiankai and Ma, Chao and Ni, Bingbing and Yang, Xiaokang and Reid, Ian and Yang, Ming-Hsuan},
     
     title     = {Deep Regression Tracking with Shrinkage Loss}, 
     
-    booktitle = {European Conference on Computer Vision},  
+    booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},  
     
-    year      = {2018},
+    pages={353--369},
+    
+    year      = {2018}
 }
