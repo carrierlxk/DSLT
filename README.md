@@ -6,7 +6,7 @@ This is the research code for the ECCV 2018 paper:
 
 [Xiankai Lu](https://github.com/carrierlxk),  [Chao Ma](https://sites.google.com/site/chaoma99/), [Bingbing Ni](https://scholar.google.com/citations?user=eUbmKwYAAAAJ&hl=en), [Xiaokang Yang](http://english.seiee.sjtu.edu.cn/english/detail/842_802.htm), [Ian Reid](https://cs.adelaide.edu.au/~ianr/), and [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/), " Deep Regression Tracking with Shrinkage Loss", ECCV 2018. 
 
-![](../images/framework.png)
+![](../master/images/framework.png)
 
 The pipeline is built upon the FCNT tracker and CRT paper (CRT: Convolutional Regression for Visual Tracking) 
 https://github.com/scott89/FCNT
