@@ -7,12 +7,12 @@ warning off;
 %visualization = false;
 im1 = double(imread([seq.path seq.img_files{1}]));
 addpath(genpath('util'));
-addpath('pathto/caffe1/matlab/'); %caffe path
+addpath('pathto/caffe-1/matlab/'); %caffe path
 addpath(genpath('toolbox'));
 caffe.set_mode_gpu();
 gpu_id = 0;  % we will use the first gpu in this demo
 caffe.set_device(gpu_id);
-net_weights =fullfile('new_vgg_net.caffemodel');  % revised VGG model
+net_weights =fullfile('model/new_vgg_net.caffemodel');  % revised VGG model
 prototxt = 'prototxt/';
 
 min_roi_size= [200 200];
@@ -54,7 +54,7 @@ end
 warning off ;
 patch = impreprocess1(patch,ratio);
 roi_size = size(patch);
-revise_prototxt1([prototxt 'otb'], 'fea_net1.prototxt', roi_size([2,1])); %DenseNet_121_new.prototxt
+revise_prototxt1([prototxt 'otb'], 'prototxt/fea_net1.prototxt', roi_size([2,1])); %DenseNet_121_new.prototxt
 net_model = [prototxt 'otb' '_fea_net.prototxt'];
 phase = 'test';
 net = caffe.Net(net_model, net_weights,phase);
@@ -73,10 +73,10 @@ if bb1([3])*bb1([4])>100*100 && bb1([3])*bb1([4])<150*150
 elseif bb1([3])*bb1([4])>=150*150 && bb1([3])*bb1([4])<250*250
     tmp_target_sz = floor(0.4*tmp_target_sz);
 end
-revise_se_res_layer('otb','vgg_se_res_layer.prototxt', fea_sz([2,1]), tmp_target_sz);
-revise_se_res_layer_test('otb','vgg_se_res_layer_test.prototxt', fea_sz([2,1]), tmp_target_sz);
-adjust_solver_def_file = ['vgg_se_res_solver.prototxt'];
-adjust_solver_def_file1 = ['vgg_se_res_solver1.prototxt'];
+revise_se_res_layer('otb','prototxt/vgg_se_res_layer.prototxt', fea_sz([2,1]), tmp_target_sz);
+revise_se_res_layer_test('otb','prototxt/vgg_se_res_layer_test.prototxt', fea_sz([2,1]), tmp_target_sz);
+adjust_solver_def_file = ['prototxt/vgg_se_res_solver.prototxt'];
+adjust_solver_def_file1 = ['prototxt/vgg_se_res_solver1.prototxt'];
 %solver_revise(adjust_solver_def_file);
 adjust_solver = caffe.Solver(adjust_solver_def_file);
 adjust_solver1 = caffe.Solver(adjust_solver_def_file1);
@@ -147,9 +147,9 @@ for i = 1:100
     last_loss = sum(abs(loss(:)));
 end
 %% ================================================================
-adjust_solver.net.save('my_net.caffemodel');
+adjust_solver.net.save('model/my_net.caffemodel');
 adjust_solver.net.set_net_phase('test');
-adjust_solver1.net.copy_from('my_net.caffemodel');
+adjust_solver1.net.copy_from('model/my_net.caffemodel');
 positions = [];
 tic;
 for im2_id = 1:numel(seq.img_files)
