@@ -16,9 +16,9 @@ Regression trackers directly learn a mapping from regularly dense samples of tar
 
 :tada:
 
-#Pytorch version is release:
+Pytorch version is release:
 --
-#Requirement
+Requirement
 --
 * Python 2.7 (I use Anaconda 2.* here. If you use Python3, you may get the very different results!)
 * Python-opencv
