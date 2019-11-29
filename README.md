@@ -20,10 +20,10 @@ Regression trackers directly learn a mapping from regularly dense samples of tar
 --
 #Requirement
 --
-Python 2.7 (I use Anaconda 2.* here. If you use Python3, you may get the very different results!)
-Python-opencv
-PyTorch 0.40
-other common packages such as numpy, etc
+* Python 2.7 (I use Anaconda 2.* here. If you use Python3, you may get the very different results!)
+* Python-opencv
+* PyTorch 0.40
+* other common packages such as numpy, etc
 
 
 ## Data Preparison
@@ -63,6 +63,7 @@ Move $ILSVRC2015_Root/Annotations/VID/val into $ILSVRC2015_Root/Annotations/VID/
 
 # Results
 The tracking results can be download [here](https://github.com/chaoma99/DSLT).
+
 If you find the code useful, please cite
 # citation
 @inproceedings{lu2018deep,
