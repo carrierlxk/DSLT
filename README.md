@@ -17,19 +17,18 @@ Regression trackers directly learn a mapping from regularly dense samples of tar
 ## Results
 The tracking results can be download [here](https://github.com/chaoma99/DSLT).
 
-If you find the code useful, please cite
-# citation
-@inproceedings{lu2018deep,
+## citation
 
-  title={Deep Regression Tracking with Shrinkage Loss},
-  
-  author={Lu, Xiankai and Ma, Chao and Ni, Bingbing and Yang, Xiaokang and Reid, Ian and Yang, Ming-Hsuan},
-  
-  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
-  
-  pages={353--369},
-  
+If you find the code useful, please cite
+
+
+```
+@inproceedings{lu2018deep,  
+  title={Deep Regression Tracking with Shrinkage Loss},  
+  author={Lu, Xiankai and Ma, Chao and Ni, Bingbing and Yang, Xiaokang and Reid, Ian and Yang, Ming-Hsuan},  
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},  
+  pages={353--369},  
   year={2018}
 }
-
+```
 
